@@ -113,3 +113,57 @@ set completeopt=longest,menu
 set wildmenu
 
 colorscheme elflord
+
+" 快捷键 
+
+" 修改leader键
+let mapleader = ','
+let g:mapleader = ','
+
+
+" 在分屏窗口之间移动
+noremap <C-j> <C-W>j
+noremap <C-k> <C-W>k
+noremap <C-h> <C-W>h
+noremap <C-l> <C-W>l
+
+" 行首行尾
+noremap H ^
+noremap L $
+
+" --------------------------------------------------------------------------------  
+"                                   正常模式 
+" --------------------------------------------------------------------------------  
+
+nmap Y y$
+
+" z 往前删，x 往后删
+nnoremap z i<BS><Esc>l
+" Buff切换; next
+nnoremap <C-N> :bn<CR>
+" 关闭buff; close
+nnoremap <leader>c :w \| bp \| bd #<CR>
+nnoremap <C-E> :enew<CR>
+
+" 去掉搜索高亮
+nnoremap <silent><leader>/ :nohls<CR>
+
+" 退出编辑，保存编辑
+nnoremap <leader>q :q<CR>
+nnoremap <leader>qa : wa \| qa<CR>
+nnoremap <leader>w :w<CR>
+nnoremap <leader>wa :wa<CR> 
+
+" 使用分号进入命令模式
+nnoremap ; : 
+nnoremap ` :! 
+
+" --------------------------------------------------------------------------------  
+"                                   命令模式 
+" --------------------------------------------------------------------------------  
+
+" 命令行模式光标移动
+cnoremap <C-j> <t_kd>
+cnoremap <C-k> <t_ku>
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
